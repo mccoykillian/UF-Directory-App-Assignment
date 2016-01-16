@@ -33,7 +33,8 @@ h3 {
 }
 
 .btn, .btn:hover, .btn:focus {
-  margin-top: 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
   background-color: #a6f6ea;
 }
 
@@ -64,6 +65,10 @@ tr.found{
     background-color:#fff;
 }
 
+.table-striped>tbody>tr:hover>td, tr.found{
+    background-color:#78E8D9;
+}
+
 #sizing-addon1 {
   background-color: #a6f6ea;
 }
@@ -72,8 +77,15 @@ tr.found{
   margin-bottom: 0;
 }
 
-.picSide {
+.albert {
   text-align: right;
+  margin-top: 15px;
+}
+
+.partyAlbert {
+  margin-top: 20px;
+  width: 200px;
+  height: auto;
 }
 
 .animate-show {

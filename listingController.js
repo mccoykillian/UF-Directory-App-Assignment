@@ -3,12 +3,13 @@ angular.module('listings').controller('ListingsController', ['$scope', 'Listings
     $scope.listings = Listings;
     $scope.detailedInfo = undefined;
     $scope.newListing = {
-      name: '',
-      code: '',
+      name: null,
+      code: null,
       coordinates: {
-        latitude: '',
-        longitude: ''
-      }
+        latitude: null,
+        longitude: null
+      },
+      address: null
     };
 
 
@@ -18,11 +19,11 @@ angular.module('listings').controller('ListingsController', ['$scope', 'Listings
      */
 
     $scope.clearFields = function() {
-      $scope.newListing.code = '';
-      $scope.newListing.name = '';
-      $scope.newListing.latitude = '';
-      $scope.newListing.longitude = '';
-      $scope.newListing.address = '';
+      $scope.newListing.code = null;
+      $scope.newListing.name = null;
+      $scope.newListing.latitude = null;
+      $scope.newListing.longitude = null;
+      $scope.newListing.address = null;
     }
 
     $scope.addListing = function() {
