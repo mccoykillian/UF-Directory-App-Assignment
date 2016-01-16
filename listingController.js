@@ -21,14 +21,14 @@ angular.module('listings').controller('ListingsController', ['$scope', 'Listings
     $scope.clearFields = function() {
       $scope.newListing.code = null;
       $scope.newListing.name = null;
-      $scope.newListing.latitude = null;
-      $scope.newListing.longitude = null;
+      $scope.newListing.coordinates.latitude = null;
+      $scope.newListing.coordinates.longitude = null;
       $scope.newListing.address = null;
     }
 
     $scope.addListing = function() {
 
-      if ($scope.newListing.code != '' || $scope.newListing.name != '') {
+      if ($scope.newListing.code != null || $scope.newListing.name != null) {
         var toInsert = {
           name: $scope.newListing.name,
           code: $scope.newListing.code,

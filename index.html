@@ -41,7 +41,7 @@
 
                   -->
 
-                  <tr ng-repeat="listing in listings | filter:searchItem | orderBy: 'code'" ng-click="showDetails(listings.indexOf(listing))" ng-dblclick="deleteListing(listings.indexOf(listing))" data-toggle="tooltip" title="double click to delete this entry">
+                  <tr ng-repeat="listing in listings | filter:searchItem | orderBy: ['code', 'name']" ng-click="showDetails(listings.indexOf(listing))" ng-dblclick="deleteListing(listings.indexOf(listing))" data-toggle="tooltip" title="double click to delete this entry">
                       <td>{{listing.code}}</td>
                       <td>{{listing.name}}</td>
                   </tr>
@@ -99,7 +99,7 @@
 
                -->
                <div>
-                 <div ng-show="detailedInfo.code == null">
+                 <div ng-show="detailedInfo.code == null && detailedInfo.name == null">
                    <div style="text-align: center" g-show="detailedInfo.name == null">Albert says, "gggREEAWWWRER! Please select a building."</div>
                    <div class="albert">
                      <a href="http://www.swamphacks.com"><img src="http://media.hometeamsonline.com/photos/football/SEFLFOOTBALL/Florida_South_Gators_Logo.png"></a>
@@ -110,11 +110,9 @@
                  <div ng-show="detailedInfo.coordinates.latitude != null">&#9<strong>Latitude:</strong>&#9{{detailedInfo.coordinates.latitude}}</div>
                  <div ng-show="detailedInfo.coordinates.longitude != null">&#9<strong>Longitude:</strong>&#9{{detailedInfo.coordinates.longitude}}</div>
                  <div ng-show="detailedInfo.address != null"><strong>Address:</strong>&#9{{detailedInfo.address}}</div>
-                 <div class="centered" ng-show="detailedInfo.code != null">
-                   <div ng-show="detailedInfo.name != null">
-                      <h6 class="centered">Albert is celebrating your success! Woooo!</h6>
-                      <a href="http://www.swamphacks.com"><img class="partyAlbert" src="https://s-media-cache-ak0.pinimg.com/736x/9e/e7/bc/9ee7bccb5ad16db94c63806f4e90f005.jpg"></a>
-                   </div>
+                 <div class="centered" ng-show="detailedInfo.code != null || detailedInfo.name != null">
+                    <h6 class="centered">Albert is celebrating your success! Woooo!</h6>
+                    <a href="http://www.swamphacks.com"><img class="partyAlbert" src="https://s-media-cache-ak0.pinimg.com/736x/9e/e7/bc/9ee7bccb5ad16db94c63806f4e90f005.jpg"></a>
                  </div>
                </div>
             </div>
