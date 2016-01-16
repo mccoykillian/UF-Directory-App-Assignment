@@ -1,8 +1,94 @@
-#searchBar {
-  margin: 15px 10px;
-}
 
 .tableWrapper {
   max-height: 400px;
   overflow: auto;
+}
+
+.form-control {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+body {
+  background-color: #FFCEAC;
+}
+
+.side-grouping {
+  background-color: white;
+  padding: 10px;
+}
+
+h3 {
+  text-align: center;
+  padding-top: 10px;
+}
+
+#searchBar {
+  margin: auto;
+}
+
+.tableWrapper {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.btn, .btn:hover, .btn:focus {
+  margin-top: 5px;
+  background-color: #a6f6ea;
+}
+
+.btn:active {
+  margin-top: 5px;
+  background-color: #DAFDF9;
+}
+
+.centered {
+  text-align: center;
+}
+
+.jumbotron {
+  background-color: #a6f6ea;
+}
+
+.table-striped>tbody>tr:nth-child(odd)>th {
+    background-color:#a6f6ea;
+}
+
+.table-striped>tbody>tr:nth-child(odd)>td,
+tr.found{
+    background-color:#DAFDF9;
+}
+
+.table-striped>tbody>tr:nth-child(even)>td,
+tr.found{
+    background-color:#fff;
+}
+
+#sizing-addon1 {
+  background-color: #a6f6ea;
+}
+
+.table {
+  margin-bottom: 0;
+}
+
+.picSide {
+  text-align: right;
+}
+
+.animate-show {
+  line-height: 20px;
+  opacity: 1;
+  padding: 10px;
+  background: white;
+}
+
+.animate-show.ng-hide-add, .animate-show.ng-hide-remove {
+  transition: all linear 0.5s;
+}
+
+.animate-show.ng-hide {
+  line-height: 0;
+  opacity: 0;
+  padding: 0 10px;
 }
